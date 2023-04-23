@@ -1,0 +1,171 @@
+@use 'reset';
+@use 'colors';
+
+html {
+	font-family: 'Inter', sans-serif;
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 62.5%;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: colors.$Very-dark-blue;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main {
+	width: 1440px;
+	height: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: colors.$Dark-desaturated-blue;
+	&-right {
+		width: 50%;
+		height: 100%;
+
+		&-img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-image: url("./img/image-header-desktop.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			&-bgc {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background-color: hsla(277, 70%, 36%, 0.6);
+			}
+		}
+
+	}
+
+	&-left {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&-texts {
+			width: 65%;
+			height: 70%;
+			display: flex;
+			align-items: start;
+			justify-content: space-between;
+			flex-direction: column;
+			&-title {
+				color: colors.$White;
+				font-size: 4rem;
+
+				span {
+					color: colors.$Soft-violet;
+				}
+			}
+
+			&-desc {
+				width: 80%;
+				color: colors.$Slightly-transparent-white;
+				font-size: 1.6rem;
+				line-height: 30px;
+			}
+
+
+		}
+		&-stats {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-stat {
+				&-number {
+					font-weight: bold;
+					color: colors.$White;
+					font-size: 2.7rem;
+					padding-bottom: 8px;
+					letter-spacing: .8px;
+				}
+				&-name {
+					font-family: 'Lexend Deca', sans-serif;
+					color: colors.$Slightly-transparent-white;
+					font-size: 1.6rem;
+					letter-spacing: 2px;
+					font-weight: 400px;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+
+
+	}
+}
+
+
+@media (max-width: 375px) {
+
+
+	.main {
+		margin: 10px;
+		min-height: 100%;
+		flex-direction:column;
+		&-right {
+			width: 100%;
+			height: 35%;
+
+			&-img {
+				width: 100%;
+				height: 100%;
+				background-image: url('./img/image-header-mobile.jpg');
+			}
+		}
+
+		&-left {
+			text-align: center;
+			order: 15;
+			width: 100%;
+			height: 65%;
+			&-texts {
+				align-items: center;
+				width: 100%;
+				height: 90%;
+				&-title {
+					width: 80%;
+					font-size: 2.8rem;
+				}
+	
+				&-desc {
+					font-size: 1.35rem;
+					line-height: 20px;
+					width: 60%;
+				}
+			}
+
+			
+			&-stats {
+				flex-direction: column;
+				text-align: center;
+				justify-content: space-between;
+				gap: 20px;
+				&-stat {
+					&-number {
+						font-size: 2rem;
+					}
+
+					&-name {
+						font-size: 1.3rem;
+					}
+				}
+			}
+		}
+
+	}
+}

@@ -1,0 +1,230 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, menu, nav, section, menu,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header,
+hgroup, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 1440px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(244, 38%, 16%);
+}
+.main-right {
+  width: 50%;
+  height: 100%;
+}
+.main-right-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/image-header-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-right-img-bgc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: hsla(277, 70%, 36%, 0.6);
+}
+.main-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-left-texts {
+  width: 65%;
+  height: 70%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.main-left-texts-title {
+  color: hsl(0, 0%, 100%);
+  font-size: 4rem;
+}
+.main-left-texts-title span {
+  color: hsl(277, 64%, 61%);
+}
+.main-left-texts-desc {
+  width: 80%;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 1.6rem;
+  line-height: 30px;
+}
+.main-left-stats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-left-stats-stat-number {
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  font-size: 2.7rem;
+  padding-bottom: 8px;
+  letter-spacing: 0.8px;
+}
+.main-left-stats-stat-name {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  font-weight: 400px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 375px) {
+  .main {
+    margin: 10px;
+    min-height: 100%;
+    flex-direction: column;
+  }
+  .main-right {
+    width: 100%;
+    height: 35%;
+  }
+  .main-right-img {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/image-header-mobile.jpg");
+  }
+  .main-left {
+    text-align: center;
+    order: 15;
+    width: 100%;
+    height: 65%;
+  }
+  .main-left-texts {
+    align-items: center;
+    width: 100%;
+    height: 90%;
+  }
+  .main-left-texts-title {
+    width: 80%;
+    font-size: 2.8rem;
+  }
+  .main-left-texts-desc {
+    font-size: 1.35rem;
+    line-height: 20px;
+    width: 60%;
+  }
+  .main-left-stats {
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .main-left-stats-stat-number {
+    font-size: 2rem;
+  }
+  .main-left-stats-stat-name {
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=style.css.map */
